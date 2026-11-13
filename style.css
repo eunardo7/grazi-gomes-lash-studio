@@ -1,4 +1,3 @@
-
 /* =================================
    GRAZI GOMES - LASH STUDIO
    Identidade visual: Preto e Dourado
@@ -65,7 +64,6 @@ h1, h2, h3 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
 }
-
 
 /* =================================
    CABEÇALHO
@@ -138,7 +136,6 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-
 /* =================================
    HERO - APRESENTAÇÃO
 ================================= */
@@ -165,7 +162,7 @@ h1, h2, h3 {
             rgba(8, 7, 6, .55) 55%,
             rgba(8, 7, 6, .12) 100%
         ),
-        url("assets/hero-cilios.jpg");
+        url("./ativos/assests/hero-cilios.jpg");
 
     background-position: center;
     background-size: cover;
@@ -247,7 +244,6 @@ h1, h2, h3 {
     letter-spacing: .5px;
 }
 
-
 /* =================================
    SERVIÇOS
 ================================= */
@@ -328,7 +324,6 @@ h1, h2, h3 {
     line-height: 1.8;
 }
 
-
 /* =================================
    SOBRE O STUDIO
 ================================= */
@@ -378,7 +373,6 @@ h1, h2, h3 {
     margin-top: 15px;
 }
 
-
 /* =================================
    DIFERENCIAIS
 ================================= */
@@ -419,7 +413,6 @@ h1, h2, h3 {
     line-height: 1.6;
 }
 
-
 /* =================================
    DEPOIMENTOS
 ================================= */
@@ -452,7 +445,6 @@ h1, h2, h3 {
     font-size: 12px;
 }
 
-
 /* =================================
    CONTATO
 ================================= */
@@ -465,7 +457,7 @@ h1, h2, h3 {
             rgba(8,7,6,.97),
             rgba(8,7,6,.80)
         ),
-        url("assets/contact-cilios.jpg") center/cover;
+        url("./ativos/assests/contact-cilios.jpg") center/cover;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
@@ -487,7 +479,6 @@ h1, h2, h3 {
     color: var(--gray);
     font-size: 13px;
 }
-
 
 /* =================================
    RODAPÉ
@@ -565,7 +556,6 @@ h1, h2, h3 {
     color: var(--gold);
 }
 
-
 /* =================================
    ANIMAÇÕES
 ================================= */
@@ -586,7 +576,6 @@ h1, h2, h3 {
     animation: fadeUp .9s ease both;
 }
 
-
 /* =================================
    RESPONSIVIDADE - TABLETS
 ================================= */
@@ -601,25 +590,14 @@ h1, h2, h3 {
         font-size: 9px;
     }
 
-    .header-button {
-        padding: 12px 15px;
-        font-size: 9px;
-    }
-
     .about-grid {
         gap: 35px;
     }
 
-    .about-image {
-        height: 380px;
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    .features-grid {
-        gap: 20px;
-    }
-
 }
-
 
 /* =================================
    RESPONSIVIDADE - CELULARES
@@ -627,43 +605,32 @@ h1, h2, h3 {
 
 @media (max-width: 700px) {
 
-    .container {
-        width: 90%;
-    }
-
-    .section {
-        padding: 70px 0;
-    }
-
     .header {
-        height: 72px;
+        height: 75px;
     }
 
     .logo img {
         width: 145px;
-        height: 55px;
-    }
-
-    .header-button {
-        display: none;
     }
 
     .menu-toggle {
         display: block;
     }
 
+    .header-button {
+        display: none;
+    }
+
     .navigation {
         position: absolute;
-        top: 72px;
+        top: 75px;
         left: 0;
         width: 100%;
-        padding: 25px;
-        background: #0d0a07;
-        border-bottom: 1px solid var(--border);
+        background: #080706;
         display: none;
         flex-direction: column;
-        gap: 25px;
-        align-items: center;
+        padding: 25px;
+        border-bottom: 1px solid var(--border);
     }
 
     .navigation.active {
@@ -674,83 +641,35 @@ h1, h2, h3 {
         font-size: 12px;
     }
 
-    /* HERO */
-
     .hero {
-        min-height: 650px;
-        align-items: flex-end;
+        min-height: 600px;
     }
 
     .hero-background {
-        background:
-            linear-gradient(
-                0deg,
-                #080706 0%,
-                rgba(8,7,6,.92) 35%,
-                rgba(8,7,6,.25) 100%
-            ),
-            url("assets/hero-cilios.jpg");
-
         background-position: 60% center;
     }
 
-    .hero-content {
-        padding-top: 250px;
-        padding-bottom: 45px;
-    }
-
-    .hero-text {
-        max-width: 100%;
-    }
-
     .hero h1 {
-        font-size: 51px;
-    }
-
-    .hero-text > p {
-        font-size: 12px;
+        font-size: 52px;
     }
 
     .hero-benefits {
-        gap: 15px;
-        justify-content: space-between;
-        margin-top: 35px;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
-    .benefit {
-        gap: 6px;
-    }
-
-    .benefit span {
-        font-size: 20px;
-    }
-
-    .benefit p {
-        font-size: 8px;
-    }
-
-    /* SERVIÇOS */
-
-    .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
+    .section {
+        padding: 65px 0;
     }
 
     .section-heading h2,
     .about-content h2 {
-        font-size: 41px;
+        font-size: 38px;
     }
 
     .services-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
     }
-
-    .service-card {
-        padding: 30px 20px;
-    }
-
-    /* SOBRE */
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -758,734 +677,90 @@ h1, h2, h3 {
     }
 
     .about-image {
-        height: 340px;
+        height: 350px;
     }
-
-    .about-content > p {
-        font-size: 12px;
-    }
-
-    /* DIFERENCIAIS */
 
     .features-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    /* DEPOIMENTOS */
-
-    .testimonial-placeholder {
-        padding: 35px 18px;
-    }
-
-    /* CONTATO */
-
-    .contact-banner {
-        padding: 55px 0;
+        gap: 25px;
     }
 
     .contact-content {
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .contact-content h2 {
-        font-size: 40px;
+        font-size: 38px;
     }
-
-    /* RODAPÉ */
 
     .footer-content {
         flex-direction: column;
         text-align: center;
-        gap: 25px;
     }
 
     .footer-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 18px;
     }
-
 }
-
 
 /* =================================
-   TELAS PEQUENAS
+   AGENDA DE NATAL E FIM DE ANO
 ================================= */
-
-@media (max-width: 380px) {
-
-    .hero h1 {
-        font-size: 43px;
-    }
-
-    .hero-benefits {
-        gap: 8px;
-    }
-
-    .benefit p {
-        font-size: 7px;
-    }
-
-    .gold-button {
-        padding: 14px 18px;
-        font-size: 9px;
-    }
-
-@media (max-width: 380px) {
-
-    .hero h1 {
-        font-size: 43px;
-    }
-
-    .hero-benefits {
-        gap: 8px;
-    }
-
-    .benefit p {
-        font-size: 7px;
-    }
-
-    .gold-button {
-        padding: 14px 18px;
-        font-size: 9px;
-    }
-
-} /* FIM DA RESPONSIVIDADE */
-
-
-/* BOTÃO WHATSAPP FLUTUANTE */
-
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25D366;
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    z-index: 99999;
-    text-decoration: none;
-    visibility: visible;
-    opacity: 1;
-    transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
-
-.whatsapp-float svg {
-    display: block;
-    width: 32px;
-    height: 32px;
-    fill: #ffffff;
-}
-
-
-.services-grid a.service-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
-
-.services-grid a.service-card:hover {
-    transform: translateY(-5px);
-    transition: 0.3s ease;
-}
-
-}
-
-
-/* ===== DEPOIMENTOS ===== */
-
-.reviews-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    margin-top: 40px;
-    width: 100%;
-}
-
-.review-card {
-    background: #100e0b;
-    border: 1px solid rgba(207, 158, 75, 0.3);
-    border-radius: 15px;
-    padding: 30px;
-    transition: 0.3s ease;
-    min-width: 0;
-}
-
-.review-card:hover {
-    transform: translateY(-5px);
-    border-color: #c99a48;
-    box-shadow: 0 10px 30px rgba(201, 154, 72, 0.1);
-}
-
-.review-stars {
-    color: #d4a34e;
-    font-size: 18px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
-.review-quote {
-    display: block;
-    color: #c99a48;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 55px;
-    line-height: 1;
-}
-
-.review-card > p {
-    color: #c7bfb2;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    line-height: 1.8;
-    margin: 15px 0 25px;
-}
-
-.review-author {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    border-top: 1px solid rgba(207, 158, 75, 0.2);
-    padding-top: 18px;
-}
-
-.review-avatar {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: rgba(201, 154, 72, 0.12);
-    border: 1px solid #c99a48;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #d4a34e;
-    font-size: 21px;
-}
-
-.review-author h3 {
-    color: #e4bd7b;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    font-weight: 500;
-    margin: 0;
-}
-
-.review-author span {
-    color: #968b7b;
-    font-size: 11px;
-}
-
-/* CHAMADA FINAL */
-
-.review-cta {
-    margin-top: 35px;
-    padding: 45px 20px;
-    text-align: center;
-    background: #100e0b;
-    border: 1px solid rgba(207, 158, 75, 0.3);
-    border-radius: 15px;
-}
-
-.review-cta > span {
-    color: #d4a34e;
-    font-size: 30px;
-}
-
-.review-cta h3 {
-    color: #e4bd7b;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 29px;
-    font-weight: 500;
-    margin: 15px 0 10px;
-}
-
-.review-cta p {
-    color: #b8ad9e;
-    font-size: 13px;
-    margin-bottom: 25px;
-}
-
-/* CELULAR E TABLET */
-
-@media (max-width: 900px) {
-    .reviews-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 600px) {
-    .reviews-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .review-card {
-        padding: 25px;
-    }
-
-    .review-cta {
-        padding: 35px 20px;
-    }
-}
-
-
-/* =================================
-   FORMULÁRIO DE DEPOIMENTOS
-================================= */
-
-.review-form-container {
-    max-width: 750px;
-    margin: 40px auto 0;
-    padding: 45px;
-    background: #100e0b;
-    border: 1px solid rgba(207, 158, 75, 0.3);
-    border-radius: 16px;
-}
-
-.review-form-header {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.review-form-header > span {
-    display: block;
-    color: #d4a34e;
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.review-form-header h3 {
-    color: #e4bd7b;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.review-form-header p {
-    color: #b8ad9e;
-    font-size: 13px;
-    line-height: 1.7;
-}
-
-.review-form {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-}
-
-.form-group label {
-    color: #e4bd7b;
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    background: #080706;
-    border: 1px solid rgba(207, 158, 75, 0.3);
-    border-radius: 8px;
-    color: #eee2d0;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    outline: none;
-    transition: 0.3s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #c99a48;
-    box-shadow: 0 0 0 2px rgba(201, 154, 72, 0.08);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #756b5d;
-}
-
-.form-group select option {
-    background: #100e0b;
-    color: #eee2d0;
-}
-
-.review-consent {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.review-consent input {
-    accent-color: #c99a48;
-    margin-top: 3px;
-}
-
-.review-consent label {
-    color: #b8ad9e;
-    font-size: 12px;
-    line-height: 1.6;
-    cursor: pointer;
-}
-
-.review-form button {
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-.review-form-footer {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 22px;
-    border-top: 1px solid rgba(207, 158, 75, 0.15);
-    color: #a99d8c;
-    font-size: 12px;
-}
-
-.review-form-footer span {
-    color: #d4a34e;
-    margin-right: 5px;
-}
-
-/* CELULAR */
-
-@media (max-width: 600px) {
-
-    .review-form-container {
-        padding: 25px 18px;
-        margin-top: 30px;
-    }
-
-    .review-form-header h3 {
-        font-size: 27px;
-    }
-
-    .review-form {
-        gap: 18px;
-    }
-
-}
-
-/* ========================================
-   AVALIAÇÕES PUBLICADAS
-======================================== */
-
-.public-reviews {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    margin: 40px 0;
-}
-
-.public-review-card {
-    background: #100e0b;
-    border: 1px solid rgba(207, 158, 75, 0.3);
-    border-radius: 15px;
-    padding: 30px;
-    transition: 0.3s ease;
-    min-width: 0;
-}
-
-.public-review-card:hover {
-    transform: translateY(-5px);
-    border-color: #c99a48;
-    box-shadow: 0 10px 30px rgba(201, 154, 72, 0.1);
-}
-
-.public-review-card .review-stars {
-    color: #d4a34e;
-    font-size: 18px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
-.public-review-card .review-quote {
-    display: block;
-    color: #c99a48;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 55px;
-    line-height: 1;
-}
-
-.public-review-card > p {
-    color: #c7bfb2;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    line-height: 1.8;
-    margin: 15px 0 25px;
-    overflow-wrap: anywhere;
-}
-
-.public-review-author {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    border-top: 1px solid rgba(207, 158, 75, 0.2);
-    padding-top: 18px;
-}
-
-.public-review-author h3 {
-    color: #e4bd7b;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    font-weight: 500;
-    margin: 0;
-}
-
-.public-review-author span {
-    color: #968b7b;
-    font-size: 11px;
-}
-
-/* MENSAGEM DE RETORNO */
-
-.review-feedback {
-    color: #d4a34e;
-    font-size: 13px;
-    text-align: center;
-    line-height: 1.6;
-    margin-top: 15px;
-}
-
-/* FORMULÁRIO */
-
-.review-form-container {
-    max-width: 750px;
-    margin: 45px auto 0;
-    padding: 45px;
-    background: #100e0b;
-    border: 1px solid rgba(207, 158, 75, 0.3);
-    border-radius: 16px;
-}
-
-.review-form-header {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.review-form-header > span {
-    display: block;
-    color: #d4a34e;
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.review-form-header h3 {
-    color: #e4bd7b;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.review-form-header p {
-    color: #b8ad9e;
-    font-size: 13px;
-    line-height: 1.7;
-}
-
-.review-form {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-}
-
-.form-group label {
-    color: #e4bd7b;
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    background: #080706;
-    border: 1px solid rgba(207, 158, 75, 0.3);
-    border-radius: 8px;
-    color: #eee2d0;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    outline: none;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #c99a48;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.review-consent {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.review-consent input {
-    accent-color: #c99a48;
-    margin-top: 3px;
-}
-
-.review-consent label {
-    color: #b8ad9e;
-    font-size: 12px;
-    line-height: 1.6;
-    cursor: pointer;
-}
-
-.review-form button {
-    width: 100%;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-}
-
-.review-form-footer {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 22px;
-    border-top: 1px solid rgba(207, 158, 75, 0.15);
-    color: #a99d8c;
-    font-size: 12px;
-}
-
-.review-form-footer span {
-    color: #d4a34e;
-    margin-right: 5px;
-}
-
-/* RESPONSIVIDADE */
-
-@media (max-width: 900px) {
-
-    .public-reviews {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    .public-reviews {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .review-form-container {
-        padding: 25px 18px;
-    }
-
-    .review-form-header h3 {
-        font-size: 27px;
-    }
-
-}
-
-/* =====================================
-   BANNER AGENDA DE NATAL
-===================================== */
 
 .banner-natal {
     position: relative;
+    padding: 90px 0;
+    overflow: hidden;
     background:
         radial-gradient(
-            circle at 15% 50%,
-            rgba(212, 175, 55, 0.09),
-            transparent 55%
+            circle at 80% 20%,
+            rgba(212,175,55,0.08),
+            transparent 35%
         ),
-        #080706 !important;
-
-    padding: 85px 0 !important;
+        linear-gradient(
+            135deg,
+            #080706,
+            #120e09,
+            #080706
+        );
     border-top: 1px solid rgba(212,175,55,0.18);
     border-bottom: 1px solid rgba(212,175,55,0.18);
-    overflow: hidden;
 }
 
 .banner-natal .container {
-    display: grid !important;
-    grid-template-columns: 1.5fr 0.8fr;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
     align-items: center;
-    gap: 65px;
+    gap: 70px;
 }
 
 .banner-natal-content {
-    max-width: 680px;
+    max-width: 600px;
 }
 
 .banner-natal .eyebrow {
-    color: #c5a059 !important;
-    font-size: 0.82rem;
-    letter-spacing: 3px;
-    font-weight: 600;
+    color: #d4af37;
+    letter-spacing: 4px;
 }
 
 .banner-natal h2 {
     font-family: 'Cormorant Garamond', serif;
-    color: #d4af37;
-    font-size: clamp(2.7rem, 5vw, 4rem);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
     font-weight: 500;
-    line-height: 1.08;
-    margin: 18px 0;
+    color: #e4c77e;
+    margin-bottom: 25px;
 }
 
 .banner-natal-content p {
-    color: #c5c5c5;
+    color: #c7c2b8;
     font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
     line-height: 1.9;
-    max-width: 600px;
     margin-bottom: 30px;
-}
-
-.banner-natal .gold-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    transition: all .3s ease;
-}
-
-.banner-natal .gold-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(212,175,55,0.2);
+    max-width: 500px;
 }
 
 /* CARD DE AVISOS */
@@ -1769,6 +1044,7 @@ h1, h2, h3 {
         padding: 0 10px;
     }
 }
+
 /* RODAPÉ DO FAQ */
 
 .faq-footer {
@@ -1839,7 +1115,6 @@ h1, h2, h3 {
     animation: goldenGlow 4s ease-in-out infinite;
 }
 
-
 /* Reflexo passando pelos botões */
 
 .gold-button,
@@ -1884,7 +1159,6 @@ h1, h2, h3 {
     }
 }
 
-
 /* Brilho discreto nos ícones */
 
 @keyframes sparklePulse {
@@ -1904,7 +1178,6 @@ h1, h2, h3 {
 .feature-icon {
     animation: sparklePulse 3s ease-in-out infinite;
 }
-
 
 /* Respeitar quem prefere menos animações */
 
